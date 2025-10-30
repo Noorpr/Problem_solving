@@ -80,3 +80,11 @@ def zero_sum(l : list) -> None:
         print(set(answer))
 
 
+def three_combination(l : list):
+
+    if not all(isinstance(item , int) for item in l) or (len(l) > 3 or len(l) < 3):
+        raise TypeError("Please ensure that the list is a three integer numbers to create the combination")
+    
+    random.shuffle(l)
+    print(int("".join(map(str, l))))
+
